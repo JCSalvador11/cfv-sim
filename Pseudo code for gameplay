@@ -1,0 +1,57 @@
+/*Gameplay Pseudo Code. Pwede niyo pong ibahin kung gusto niyo. Suggestion lang naman. Xim Vyge Narciso*/
+
+/* Duel Flow Module*/
+
+open
+	tossCoin()
+	primaryDraw()
+	var turn = 0
+	var seqCheck = 0
+	while (d1 != 6 || d2 != 6)
+		turn++
+		if (turn == 1)
+			attack = false
+		else 
+			attack = true
+		seqCheck = turn % 2
+		if (seqCheck == 1)
+			d2 = playerTurn(1,d2)
+		else 
+			d1 = playerTurn(2,d1)
+	if (d2 == 6)
+		print ("Player 1 won")
+	else
+		print ("Player 2 won")
+close
+
+/* Player Turn Module */
+
+open
+	standAll()
+	drawCard()
+	mPhase1()
+	battlePhase()
+	mPhase2()
+close
+
+/* Primary Draw Module */
+
+open
+	selectVanguard()
+	shuffleDeck()
+	for (int x = 1; x <= 5; x++)
+		drawCard()
+close
+
+/* Toss Coin Module */
+
+open
+	var choice = choose(heads||tails)
+	var result = rand(heads||tails)
+	if (choice == result)
+		var pTurn = choose(1||2)
+		if (pTurn == 1)
+			pValue = 1
+		else
+			pValue = 2
+close
