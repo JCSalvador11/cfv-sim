@@ -16,3 +16,7 @@ Phase 2:
 
 1. Create Core functions
 2. Code functiona of first 100 cards
+
+
+**Contribute**
+
